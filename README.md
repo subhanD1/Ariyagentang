@@ -1,2 +1,117 @@
-# Ariyagentang
-Poto ariya gentang
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ariya Aesthetic Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f0f0f, #1f1f3d, #3a1c71);
+      overflow: hidden;
+      color: white;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 400px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 25px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: none;
+      background: linear-gradient(90deg, #ff4ecd, #7a5cff);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(122,92,255,0.4);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img
+      src="https://i.ibb.co/2kR7z7r/profile.png"
+      alt="Ariya"
+      class="photo"
+    >
+
+    <h1>Ariya</h1>
+    <p>Welcome to my aesthetic music profile ✨</p>
+
+    <button class="btn" onclick="playMusic()">▶ Putar Musik DJ</button>
+
+    <audio id="bgMusic" loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    function playMusic() {
+      const music = document.getElementById('bgMusic');
+      music.play();
+      alert('Musik DJ diputar 🎵');
+    }
+  </script>
+
+</body>
+</html>
